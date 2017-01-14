@@ -10,7 +10,7 @@ namespace GigHub.Models
     public class Attendance
     {
         public Gig Gig { get; set; }
-        public ApplicationUser Atendee { get; set; }
+        public ApplicationUser Attendee { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -19,6 +19,6 @@ namespace GigHub.Models
         [Key]
         [Column(Order = 2)]
         public string AttendeeId { get; set; }
-
     }
+
 }
