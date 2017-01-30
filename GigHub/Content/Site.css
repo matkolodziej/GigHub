@@ -28,12 +28,29 @@ span.field-validation-error {
     font-weight: bold;
 }
 
-.voffset { margin-top: 2px; }
-.voffset1 { margin-top: 5px; }
-.voffset2 { margin-top: 10px; }
-.voffset3 { margin-top: 20px; }
-.voffset4 { margin-top: 40px; }
-.voffset5 { margin-top: 80px; }
+.voffset {
+    margin-top: 2px;
+}
+
+.voffset1 {
+    margin-top: 5px;
+}
+
+.voffset2 {
+    margin-top: 10px;
+}
+
+.voffset3 {
+    margin-top: 20px;
+}
+
+.voffset4 {
+    margin-top: 40px;
+}
+
+.voffset5 {
+    margin-top: 80px;
+}
 
 /* Boostrap Overrides */
 body {
@@ -45,35 +62,39 @@ body {
     border-color: #FF4342;
 }
 
-.navbar-inverse .navbar-nav > li > a {
-    color: #FFF;
-}
+    .navbar-inverse .navbar-nav > li > a {
+        color: #FFF;
+    }
 
-.navbar-inverse .navbar-brand {
-    color: #FFF;
-}
+    .navbar-inverse .navbar-brand {
+        color: #FFF;
+    }
 
 .nav-inverse .notifications {
-    position: relative;    
+    position: relative;
 }
-.nav-inverse .notifications .badge {
-    position: absolute;
-    top: 8px;
-    right: -1px;
-    background: #a80a0a;
-}
+
+    .nav-inverse .notifications .badge {
+        position: absolute;
+        top: 8px;
+        right: -1px;
+        background: #a80a0a;
+    }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     background-color: #cd2827;
     background-color: rgba(205,40,39,0.55);
 }
+
 .navbar-brand {
     font-weight: 700;
 }
+
 .dropdown-menu {
     box-shadow: none;
     -webkit-box-shadow: none;
 }
+
 navbar-inverse .navbar-nav > .dropdown > a .caret {
     border-top-color: #fff;
     border-bottom-color: #fff;
@@ -92,7 +113,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Lato","Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .form-group {
@@ -105,12 +126,13 @@ h6,
     -ms-border-radius: 9px;
     border-radius: 9px;
 }
-.form-control:focus {
-    border-color: #2196f3;
-    -ms-box-shadow: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-}
+
+    .form-control:focus {
+        border-color: #2196f3;
+        -ms-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
 
 .btn {
     /*font-size: 17px;
@@ -119,57 +141,90 @@ h6,
     border-radius: 9px;
 }
 
+.popover {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 
 /* Page Specific Styles */
 .gigs {
     list-style: none;
 }
-.gigs > li {
-    position: relative;
-    margin-bottom: 30px;
+
+    .gigs > li {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+        .gigs > li .date {
+            background: red;
+            color: white;
+            text-align: center;
+            width: 60px;
+            -ms-border-radius: 9px;
+            border-radius: 9px;
+        }
+
+            .gigs > li .date .month {
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 2px 6px;
+            }
+
+            .gigs > li .date .day {
+                background: #f7f7f7;
+                color: #333;
+                font-size: 20px;
+                padding: 6px 12px;
+            }
+
+        .gigs > li .details {
+            position: absolute;
+            top: 0;
+            left: 70px;
+        }
+
+            .gigs > li .details .artist {
+                font-weight: bold;
+                display: block;
+            }
+
+            .gigs > li .details .genre {
+                font-size: 15px;
+            }
+
+        .gigs > li .actions {
+            font-size: 15px;
+            display: none;
+        }
+
+        .gigs > li:hover .actions {
+            display: block;
+        }
+
+.popover-notifications .popover-content {
+    padding: 0px;
 }
 
-.gigs >li .date {
-    background: red;
-    color: white;
-    text-align: center;
-    width: 60px;
-    -ms-border-radius: 9px;
-    border-radius: 9px;
+.popover-notifications ul.notifications {
+    list-style: none;
+    padding-left: 0;
 }
 
-.gigs > li .date .month {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 2px 6px;
-}
-.gigs > li .date .day {
-    background: #f7f7f7;
-    color: #333;
-    font-size: 20px;
-    padding: 6px 12px; 
+    .popover-notifications ul.notifications > li {
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+    }
 
-}
+        .popover-notifications ul.notifications > li:last-child {
+            border-bottom: none;
+        }
+        .popover-notifications ul.notifications .highlight {
+            font-weight: bold;
+        }
 
-.gigs > li .details {
-    position: absolute;
-    top: 0;
-    left: 70px;
-}
-.gigs > li .details .artist {
-    font-weight: bold;
-    display: block;
-}
-.gigs > li .details .genre {
-    font-size: 15px;
-}
-
-.gigs > li .actions {
-    font-size: 15px;
-    display: none;
-}
-
-.gigs > li:hover .actions {
-    display: block;
+#searchGigs {
+    width: 300px;
 }
